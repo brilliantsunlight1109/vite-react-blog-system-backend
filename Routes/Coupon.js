@@ -24,17 +24,17 @@ const fileFilter = (req, file, cb) => {
 
 const upload = multer({ storage, fileFilter });
 const {
-  getAllBlog,
-  postCreateBlog,
-  putUpdateBlog,
-  deleteBlog,
-  getIdBlog,
-} = require("../Controllers/Blog");
+  getAllCoupon,
+  postCreateCoupon,
+  putUpdateCoupon,
+  deleteCoupon,
+  getIdCoupon,
+} = require("../Controllers/Coupon");
 
-router.get("/", getAllBlog);
-router.get("/:id", getIdBlog);
-router.post("/", upload.single("uploadImage"), postCreateBlog);
-router.put("/:id", upload.single("uploadImage"), putUpdateBlog);
-router.delete("/:id", deleteBlog);
+router.get("/", getAllCoupon);
+router.get("/:id", getIdCoupon);
+router.post("/", upload.single("uploadImage"), postCreateCoupon);
+router.put("/:id", upload.single("uploadImage"), putUpdateCoupon);
+router.delete("/:id", deleteCoupon);
 
 module.exports = router;

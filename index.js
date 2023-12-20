@@ -4,6 +4,7 @@ connectDB();
 const Style = require("./Routes/Style");
 const Blog = require("./Routes/Blog");
 const Stylist = require("./Routes/Stylist");
+const Coupon = require("./Routes/Coupon");
 const cors = require("cors");
 const app = express();
 require("dotenv").config();
@@ -43,6 +44,8 @@ app.use("/api/style", Style);
 app.use("/api/blog", Blog);
 
 app.use("/api/stylist", Stylist);
+
+app.use("/api/coupon", Coupon);
 
 // app.use(express.static(path.join(__dirname, "../frontend/build")));
 
